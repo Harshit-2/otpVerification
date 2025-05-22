@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wiw-dv-zne">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Registration View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RegistrationViewController" customModule="Task1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scrollView">
+                                <rect key="frame" x="0.0" y="162" width="393" height="622"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="titleLabel">
+                                                <rect key="frame" x="20" y="40" width="353" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill in the details below to register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="subtitleLabel">
+                                                <rect key="frame" x="20" y="86" width="353" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="firstNameTextField">
+                                                <rect key="frame" x="20" y="136" width="353" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="firstNameHeight"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="givenName"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lastNameTextField">
+                                                <rect key="frame" x="20" y="200" width="353" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="lastNameHeight"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="familyName"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emailTextField">
+                                                <rect key="frame" x="20" y="264" width="353" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="emailHeight"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="emailAddress"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phoneTextField">
+                                                <rect key="frame" x="20" y="328" width="353" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="phoneHeight"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="telephoneNumber"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="passwordContainerView">
+                                                <rect key="frame" x="20" y="392" width="353" height="44"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="passwordTextField">
+                                                        <rect key="frame" x="0.0" y="0.0" width="309" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="newPassword"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="showPasswordButton">
+                                                        <rect key="frame" x="309" y="0.0" width="44" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="44" id="showPasswordWidth"/>
+                                                        </constraints>
+                                                        <state key="normal" title="👁"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="showPasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v4u-su-3dP"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="passwordTextField" secondAttribute="bottom" id="passwordBottom"/>
+                                                    <constraint firstAttribute="bottom" secondItem="showPasswordButton" secondAttribute="bottom" id="passwordButtonBottom"/>
+                                                    <constraint firstItem="showPasswordButton" firstAttribute="leading" secondItem="passwordTextField" secondAttribute="trailing" id="passwordButtonLeading"/>
+                                                    <constraint firstItem="showPasswordButton" firstAttribute="top" secondItem="passwordContainerView" secondAttribute="top" id="passwordButtonTop"/>
+                                                    <constraint firstAttribute="height" constant="44" id="passwordContainerHeight"/>
+                                                    <constraint firstItem="passwordTextField" firstAttribute="leading" secondItem="passwordContainerView" secondAttribute="leading" id="passwordLeading"/>
+                                                    <constraint firstItem="passwordTextField" firstAttribute="top" secondItem="passwordContainerView" secondAttribute="top" id="passwordTop"/>
+                                                    <constraint firstAttribute="trailing" secondItem="showPasswordButton" secondAttribute="trailing" id="passwordTrailing"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="confirmPasswordContainerView">
+                                                <rect key="frame" x="20" y="456" width="353" height="44"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="confirmPasswordTextField">
+                                                        <rect key="frame" x="0.0" y="0.0" width="309" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="newPassword"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="showConfirmPasswordButton">
+                                                        <rect key="frame" x="309" y="0.0" width="44" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="44" id="showConfirmPasswordWidth"/>
+                                                        </constraints>
+                                                        <state key="normal" title="👁"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="showConfirmPasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zwr-jR-qcg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="confirmPasswordTextField" secondAttribute="bottom" id="confirmPasswordBottom"/>
+                                                    <constraint firstAttribute="bottom" secondItem="showConfirmPasswordButton" secondAttribute="bottom" id="confirmPasswordButtonBottom"/>
+                                                    <constraint firstItem="showConfirmPasswordButton" firstAttribute="leading" secondItem="confirmPasswordTextField" secondAttribute="trailing" id="confirmPasswordButtonLeading"/>
+                                                    <constraint firstItem="showConfirmPasswordButton" firstAttribute="top" secondItem="confirmPasswordContainerView" secondAttribute="top" id="confirmPasswordButtonTop"/>
+                                                    <constraint firstAttribute="height" constant="44" id="confirmPasswordContainerHeight"/>
+                                                    <constraint firstItem="confirmPasswordTextField" firstAttribute="leading" secondItem="confirmPasswordContainerView" secondAttribute="leading" id="confirmPasswordLeading"/>
+                                                    <constraint firstItem="confirmPasswordTextField" firstAttribute="top" secondItem="confirmPasswordContainerView" secondAttribute="top" id="confirmPasswordTop"/>
+                                                    <constraint firstAttribute="trailing" secondItem="showConfirmPasswordButton" secondAttribute="trailing" id="confirmPasswordTrailing"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="newsletterContainerView">
+                                                <rect key="frame" x="20" y="520" width="353" height="44"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="newsletterCheckbox">
+                                                        <rect key="frame" x="0.0" y="10" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="checkboxHeight"/>
+                                                            <constraint firstAttribute="width" constant="24" id="checkboxWidth"/>
+                                                        </constraints>
+                                                        <state key="normal" title="☐"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="newsletterCheckboxTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1v-0v-9HG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe to newsletter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="newsletterLabel">
+                                                        <rect key="frame" x="34" y="12" width="319" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="newsletterCheckbox" firstAttribute="centerY" secondItem="newsletterContainerView" secondAttribute="centerY" id="checkboxCenterY"/>
+                                                    <constraint firstItem="newsletterCheckbox" firstAttribute="leading" secondItem="newsletterContainerView" secondAttribute="leading" id="checkboxLeading"/>
+                                                    <constraint firstAttribute="height" constant="44" id="newsletterContainerHeight"/>
+                                                    <constraint firstItem="newsletterLabel" firstAttribute="centerY" secondItem="newsletterContainerView" secondAttribute="centerY" id="newsletterLabelCenterY"/>
+                                                    <constraint firstItem="newsletterLabel" firstAttribute="leading" secondItem="newsletterCheckbox" secondAttribute="trailing" constant="10" id="newsletterLabelLeading"/>
+                                                    <constraint firstAttribute="trailing" secondItem="newsletterLabel" secondAttribute="trailing" id="newsletterLabelTrailing"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="registerButton">
+                                                <rect key="frame" x="20" y="584" width="353" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="registerButtonHeight"/>
+                                                </constraints>
+                                                <state key="normal" title="Register"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Register">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="registerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zG8-aj-hNS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loginButton">
+                                                <rect key="frame" x="20" y="654" width="353" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="loginButtonHeight"/>
+                                                </constraints>
+                                                <state key="normal" title="Already have an account? Login"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Already have an account? Login">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pj5-Nq-zez"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="loadingIndicator">
+                                                <rect key="frame" x="178" y="718" width="37" height="37"/>
+                                                <color key="color" systemColor="systemBlueColor"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="confirmPasswordContainerView" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="20" id="confirmPasswordContainerLeading"/>
+                                            <constraint firstItem="confirmPasswordContainerView" firstAttribute="top" secondItem="passwordContainerView" secondAttribute="bottom" constant="20" id="confirmPasswordContainerTop"/>
+                                            <constraint firstAttribute="trailing" secondItem="confirmPasswordContainerView" secondAttribute="trailing" constant="20" id="confirmPasswordContainerTrailing"/>
+                                            <constraint firstItem="emailTextField" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="20" id="emailLeading"/>
+                                            <constraint firstItem="emailTextField" firstAttribute="top" secondItem="lastNameTextField" secondAttribute="bottom" constant="20" id="emailTop"/>
+                                            <constraint firstAttribute="trailing" secondItem="emailTextField" secondAttribute="trailing" constant="20" id="emailTrailing"/>
+                                            <constraint firstItem="firstNameTextField" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="20" id="firstNameLeading"/>
+                                            <constraint firstItem="firstNameTextField" firstAttribute="top" secondItem="subtitleLabel" secondAttribute="bottom" constant="30" id="firstNameTop"/>
+                                            <constraint firstAttribute="trailing" secondItem="firstNameTextField" secondAttribute="trailing" constant="20" id="firstNameTrailing"/>
+                                            <constraint firstItem="lastNameTextField" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="20" id="lastNameLeading"/>
+                                            <constraint firstItem="lastNameTextField" firstAttribute="top" secondItem="firstNameTextField" secondAttribute="bottom" constant="20" id="lastNameTop"/>
+                                            <constraint firstAttribute="trailing" secondItem="lastNameTextField" secondAttribute="trailing" constant="20" id="lastNameTrailing"/>
+                                            <constraint firstAttribute="bottom" secondItem="loadingIndicator" secondAttribute="bottom" constant="45" id="loadingIndicatorBottom"/>
+                                            <constraint firstItem="loadingIndicator" firstAttribute="centerX" secondItem="contentView" secondAttribute="centerX" id="loadingIndicatorCenterX"/>
+                                            <constraint firstItem="loadingIndicator" firstAttribute="top" secondItem="loginButton" secondAttribute="bottom" constant="20" id="loadingIndicatorTop"/>
+                                            <constraint firstItem="loginButton" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="20" id="loginButtonLeading"/>
+                                            <constraint firstItem="loginButton" firstAttribute="top" secondItem="registerButton" secondAttribute="bottom" constant="20" id="loginButtonTop"/>
+                                            <constraint firstAttribute="trailing" secondItem="loginButton" secondAttribute="trailing" constant="20" id="loginButtonTrailing"/>
+                                            <constraint firstItem="newsletterContainerView" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="20" id="newsletterContainerLeading"/>
+                                            <constraint firstItem="newsletterContainerView" firstAttribute="top" secondItem="confirmPasswordContainerView" secondAttribute="bottom" constant="20" id="newsletterContainerTop"/>
+                                            <constraint firstAttribute="trailing" secondItem="newsletterContainerView" secondAttribute="trailing" constant="20" id="newsletterContainerTrailing"/>
+                                            <constraint firstItem="passwordContainerView" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="20" id="passwordContainerLeading"/>
+                                            <constraint firstItem="passwordContainerView" firstAttribute="top" secondItem="phoneTextField" secondAttribute="bottom" constant="20" id="passwordContainerTop"/>
+                                            <constraint firstAttribute="trailing" secondItem="passwordContainerView" secondAttribute="trailing" constant="20" id="passwordContainerTrailing"/>
+                                            <constraint firstItem="phoneTextField" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="20" id="phoneLeading"/>
+                                            <constraint firstItem="phoneTextField" firstAttribute="top" secondItem="emailTextField" secondAttribute="bottom" constant="20" id="phoneTop"/>
+                                            <constraint firstAttribute="trailing" secondItem="phoneTextField" secondAttribute="trailing" constant="20" id="phoneTrailing"/>
+                                            <constraint firstItem="registerButton" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="20" id="registerButtonLeading"/>
+                                            <constraint firstItem="registerButton" firstAttribute="top" secondItem="newsletterContainerView" secondAttribute="bottom" constant="20" id="registerButtonTop"/>
+                                            <constraint firstAttribute="trailing" secondItem="registerButton" secondAttribute="trailing" constant="20" id="registerButtonTrailing"/>
+                                            <constraint firstItem="subtitleLabel" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="20" id="subtitleLeading"/>
+                                            <constraint firstItem="subtitleLabel" firstAttribute="top" secondItem="titleLabel" secondAttribute="bottom" constant="10" id="subtitleTop"/>
+                                            <constraint firstAttribute="trailing" secondItem="subtitleLabel" secondAttribute="trailing" constant="20" id="subtitleTrailing"/>
+                                            <constraint firstItem="titleLabel" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="20" id="titleLeading"/>
+                                            <constraint firstItem="titleLabel" firstAttribute="top" secondItem="contentView" secondAttribute="top" constant="40" id="titleTop"/>
+                                            <constraint firstAttribute="trailing" secondItem="titleLabel" secondAttribute="trailing" constant="20" id="titleTrailing"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="contentView" firstAttribute="bottom" secondItem="scrollView" secondAttribute="bottom" id="contentBottom"/>
+                                    <constraint firstItem="contentView" firstAttribute="leading" secondItem="scrollView" secondAttribute="leading" id="contentLeading"/>
+                                    <constraint firstItem="contentView" firstAttribute="top" secondItem="scrollView" secondAttribute="top" id="contentTop"/>
+                                    <constraint firstItem="contentView" firstAttribute="trailing" secondItem="scrollView" secondAttribute="trailing" id="contentTrailing"/>
+                                    <constraint firstItem="contentView" firstAttribute="width" secondItem="scrollView" secondAttribute="width" id="contentWidth"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="scrollView" secondAttribute="bottom" id="scrollViewBottom"/>
+                            <constraint firstItem="scrollView" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="scrollViewLeading"/>
+                            <constraint firstItem="scrollView" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="scrollViewTop"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="scrollView" secondAttribute="trailing" id="scrollViewTrailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zRf-4d-uzT"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="confirmPasswordTextField" id="confirmPasswordConnection"/>
+                        <outlet property="contentView" destination="contentView" id="contentViewConnection"/>
+                        <outlet property="emailTextField" destination="emailTextField" id="emailConnection"/>
+                        <outlet property="firstNameTextField" destination="firstNameTextField" id="firstNameConnection"/>
+                        <outlet property="lastNameTextField" destination="lastNameTextField" id="lastNameConnection"/>
+                        <outlet property="loadingIndicator" destination="loadingIndicator" id="loadingIndicatorConnection"/>
+                        <outlet property="loginButton" destination="loginButton" id="loginButtonConnection"/>
+                        <outlet property="newsletterCheckbox" destination="newsletterCheckbox" id="newsletterCheckboxConnection"/>
+                        <outlet property="newsletterLabel" destination="newsletterLabel" id="newsletterLabelConnection"/>
+                        <outlet property="passwordTextField" destination="passwordTextField" id="passwordConnection"/>
+                        <outlet property="phoneTextField" destination="phoneTextField" id="phoneConnection"/>
+                        <outlet property="registerButton" destination="registerButton" id="registerButtonConnection"/>
+                        <outlet property="scrollView" destination="scrollView" id="scrollViewConnection"/>
+                        <outlet property="showConfirmPasswordButton" destination="showConfirmPasswordButton" id="showConfirmPasswordConnection"/>
+                        <outlet property="showPasswordButton" destination="showPasswordButton" id="showPasswordConnection"/>
+                        <outlet property="subtitleLabel" destination="subtitleLabel" id="subtitleConnection"/>
+                        <outlet property="titleLabel" destination="titleLabel" id="titleConnection"/>
+                        <segue destination="OTP-VC-123" kind="show" identifier="showOTPVerification" id="otpSegue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="otp-scene">
+            <objects>
+                <viewController storyboardIdentifier="OTPViewController" id="OTP-VC-123" customClass="OTPViewController" customModule="Task1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="otp-main-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Your Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otpTitleLabel">
+                                <rect key="frame" x="20" y="223" width="353" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We've sent a verification code to your email" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otpSubtitleLabel">
+                                <rect key="frame" x="20" y="279" width="353" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the 5-digit code below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="instructionLabel">
+                                <rect key="frame" x="20" y="318.33333333333331" width="353" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="otpStackView">
+                                <rect key="frame" x="41.666666666666657" y="367.66666666666669" width="310" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otpTextField1">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="otp1Height"/>
+                                            <constraint firstAttribute="width" constant="50" id="otp1Width"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otpTextField2">
+                                        <rect key="frame" x="65" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="otp2Height"/>
+                                            <constraint firstAttribute="width" constant="50" id="otp2Width"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otpTextField3">
+                                        <rect key="frame" x="130" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="otp3Height"/>
+                                            <constraint firstAttribute="width" constant="50" id="otp3Width"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otpTextField4">
+                                        <rect key="frame" x="195" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="otp4Height"/>
+                                            <constraint firstAttribute="width" constant="50" id="otp4Width"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otpTextField5">
+                                        <rect key="frame" x="260" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="otp5Height"/>
+                                            <constraint firstAttribute="width" constant="50" id="otp5Width"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="otpStackHeight"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code expires in 05:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="timerLabel">
+                                <rect key="frame" x="20" y="447.66666666666669" width="353" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="verifyButton">
+                                <rect key="frame" x="20" y="507" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="verifyButtonHeight"/>
+                                </constraints>
+                                <state key="normal" title="Verify Code"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Verify Code">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="verifyButtonTapped:" destination="OTP-VC-123" eventType="touchUpInside" id="Jut-CI-hRI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="resendButton">
+                                <rect key="frame" x="20" y="577" width="353" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="resendButtonHeight"/>
+                                </constraints>
+                                <state key="normal" title="Resend Code"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Resend Code">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resendButtonTapped:" destination="OTP-VC-123" eventType="touchUpInside" id="W3t-DZ-ULl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="backButton">
+                                <rect key="frame" x="20" y="641" width="353" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="backButtonHeight"/>
+                                </constraints>
+                                <state key="normal" title="← Back to Registration"/>
+                                <buttonConfiguration key="configuration" style="plain" title="← Back to Registration">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="OTP-VC-123" eventType="touchUpInside" id="vOp-ec-F4o"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="otpLoadingIndicator">
+                                <rect key="frame" x="178" y="705" width="37" height="37"/>
+                                <color key="color" systemColor="systemBlueColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="otp-safe-area"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="backButton" firstAttribute="leading" secondItem="otp-safe-area" secondAttribute="leading" constant="20" id="backLeading"/>
+                            <constraint firstItem="backButton" firstAttribute="top" secondItem="resendButton" secondAttribute="bottom" constant="20" id="backTop"/>
+                            <constraint firstItem="otp-safe-area" firstAttribute="trailing" secondItem="backButton" secondAttribute="trailing" constant="20" id="backTrailing"/>
+                            <constraint firstItem="instructionLabel" firstAttribute="leading" secondItem="otp-safe-area" secondAttribute="leading" constant="20" id="instructionLeading"/>
+                            <constraint firstItem="instructionLabel" firstAttribute="top" secondItem="otpSubtitleLabel" secondAttribute="bottom" constant="20" id="instructionTop"/>
+                            <constraint firstItem="otp-safe-area" firstAttribute="trailing" secondItem="instructionLabel" secondAttribute="trailing" constant="20" id="instructionTrailing"/>
+                            <constraint firstItem="otpLoadingIndicator" firstAttribute="centerX" secondItem="otp-main-view" secondAttribute="centerX" id="otpLoadingCenterX"/>
+                            <constraint firstItem="otpLoadingIndicator" firstAttribute="top" secondItem="backButton" secondAttribute="bottom" constant="20" id="otpLoadingTop"/>
+                            <constraint firstItem="otpStackView" firstAttribute="centerX" secondItem="otp-main-view" secondAttribute="centerX" id="otpStackCenterX"/>
+                            <constraint firstItem="otpStackView" firstAttribute="top" secondItem="instructionLabel" secondAttribute="bottom" constant="30" id="otpStackTop"/>
+                            <constraint firstItem="otpSubtitleLabel" firstAttribute="leading" secondItem="otp-safe-area" secondAttribute="leading" constant="20" id="otpSubtitleLeading"/>
+                            <constraint firstItem="otpSubtitleLabel" firstAttribute="top" secondItem="otpTitleLabel" secondAttribute="bottom" constant="20" id="otpSubtitleTop"/>
+                            <constraint firstItem="otp-safe-area" firstAttribute="trailing" secondItem="otpSubtitleLabel" secondAttribute="trailing" constant="20" id="otpSubtitleTrailing"/>
+                            <constraint firstItem="otpTitleLabel" firstAttribute="leading" secondItem="otp-safe-area" secondAttribute="leading" constant="20" id="otpTitleLeading"/>
+                            <constraint firstItem="otpTitleLabel" firstAttribute="top" secondItem="otp-safe-area" secondAttribute="top" constant="61" id="otpTitleTop"/>
+                            <constraint firstItem="otp-safe-area" firstAttribute="trailing" secondItem="otpTitleLabel" secondAttribute="trailing" constant="20" id="otpTitleTrailing"/>
+                            <constraint firstItem="resendButton" firstAttribute="leading" secondItem="otp-safe-area" secondAttribute="leading" constant="20" id="resendLeading"/>
+                            <constraint firstItem="resendButton" firstAttribute="top" secondItem="verifyButton" secondAttribute="bottom" constant="20" id="resendTop"/>
+                            <constraint firstItem="otp-safe-area" firstAttribute="trailing" secondItem="resendButton" secondAttribute="trailing" constant="20" id="resendTrailing"/>
+                            <constraint firstItem="timerLabel" firstAttribute="leading" secondItem="otp-safe-area" secondAttribute="leading" constant="20" id="timerLeading"/>
+                            <constraint firstItem="timerLabel" firstAttribute="top" secondItem="otpStackView" secondAttribute="bottom" constant="30" id="timerTop"/>
+                            <constraint firstItem="otp-safe-area" firstAttribute="trailing" secondItem="timerLabel" secondAttribute="trailing" constant="20" id="timerTrailing"/>
+                            <constraint firstItem="verifyButton" firstAttribute="leading" secondItem="otp-safe-area" secondAttribute="leading" constant="20" id="verifyLeading"/>
+                            <constraint firstItem="verifyButton" firstAttribute="top" secondItem="timerLabel" secondAttribute="bottom" constant="40" id="verifyTop"/>
+                            <constraint firstItem="otp-safe-area" firstAttribute="trailing" secondItem="verifyButton" secondAttribute="trailing" constant="20" id="verifyTrailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="otp-nav-item"/>
+                    <connections>
+                        <outlet property="backButton" destination="backButton" id="backConnection"/>
+                        <outlet property="instructionLabel" destination="instructionLabel" id="instructionConnection"/>
+                        <outlet property="loadingIndicator" destination="otpLoadingIndicator" id="otpLoadingConnection"/>
+                        <outlet property="otpStackView" destination="otpStackView" id="otpStackConnection"/>
+                        <outlet property="otpTextField1" destination="otpTextField1" id="otp1Connection"/>
+                        <outlet property="otpTextField2" destination="otpTextField2" id="otp2Connection"/>
+                        <outlet property="otpTextField3" destination="otpTextField3" id="otp3Connection"/>
+                        <outlet property="otpTextField4" destination="otpTextField4" id="otp4Connection"/>
+                        <outlet property="otpTextField5" destination="otpTextField5" id="otp5Connection"/>
+                        <outlet property="resendButton" destination="resendButton" id="resendConnection"/>
+                        <outlet property="subtitleLabel" destination="otpSubtitleLabel" id="otpSubtitleConnection"/>
+                        <outlet property="timerLabel" destination="timerLabel" id="timerConnection"/>
+                        <outlet property="titleLabel" destination="otpTitleLabel" id="otpTitleConnection"/>
+                        <outlet property="verifyButton" destination="verifyButton" id="verifyConnection"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otp-first-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956.4885496183206" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g3N-KG-vQZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wiw-dv-zne" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rQS-Bw-STP">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WPF-FE-4kM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAN-Zo-Nt8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
